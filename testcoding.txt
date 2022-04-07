@@ -1,10 +1,21 @@
-int a = 5;
-int b = 3;
-if (a + b > 10)
+string food = "ramen";
+
+Random random = new Random();
+int i = random.Next(0, 3);
+
+switch (i)
 {
-    Console.Writeline("The answer is greater than 10");
+  case 0;
+      food = "ramen";
+      break;
+  case 1;
+      food = "spaghetti";
+      break;
+  case 2;
+      food = "salad";
+      break;
 }
-else
-{
-    Console.Writeline("The answer is not greater than 10");
-}
+console.writeLine("Random recommendation; " + food + ".");
+
+console.writeLine("We have ramen, spaghetti and salad. Which do you like?");
+food = Console.ReadLine();
