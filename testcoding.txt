@@ -1,14 +1,69 @@
-int a = 5;
-int b = 3;
-if (a + b > 15)
+#nullable disable
+Console .WriteLine  ("請問您的姓名是?");
+string name = Console .ReadLine ();
+
+Console .WriteLine  ("請問您的姓別是?");
+string sex = Console .ReadLine ();
+
+Console .WriteLine  ("請問您的生日是?");
+string birthday = Console .ReadLine ();
+
+Console .WriteLine  ("請問您的學號是?");
+string student_id = Console .ReadLine ();
+
+Console.WriteLine("您的姓名是："+ name );
+Console.WriteLine("您的性別是："+ sex );
+Console.WriteLine("您的生日是："+ birthday );
+Console.WriteLine("您的學號是："+ student_id );
+Console.WriteLine("===========================================================================");
+
+Console.WriteLine("請問您輸入的資訊正確嗎?");
+Console.WriteLine("正確請輸入1    錯誤請輸入2.");
+
+string  check =  Console .ReadLine ();
+
+if (check == "1")
 {
-    Console.Writeline("The answer is greater than 15");
+Console .WriteLine ("已完成資料建置");
 }
-else if (a + b > 10)
+if (check == "2")
 {
-    Console.Writeline("The answer is between 15 and 10");
-}
-else
+Console .WriteLine ("請選擇要修改的資訊");
+Console .WriteLine ("姓名請打1");
+Console .WriteLine ("姓別請打2");
+Console .WriteLine ("生日請打3");
+Console .WriteLine ("學號請打4");
+
+string change = Console .ReadLine ();
+switch (change)
 {
-    Console.Writeline("The answer is not greater than 10");
+case "1":
+Console .WriteLine ("輸入正確姓名");
+name ="";
+name = Console .ReadLine ();
+break; 
+        
+case "2":
+Console .WriteLine ("輸入正確姓別");
+sex ="";
+sex = Console .ReadLine ();
+break; 
+
+case "3":
+Console .WriteLine ("輸入正確生日");
+birthday ="";
+birthday = Console .ReadLine ();
+break; 
+
+case "4":
+Console .WriteLine ("輸入正確學號");
+student_id ="";
+student_id = Console .ReadLine ();
+break; 
 }
+Console.WriteLine("您的姓名是："+ name );
+Console.WriteLine("您的性別是："+ sex );
+Console.WriteLine("您的生日是："+ birthday );
+Console.WriteLine("您的學號是："+ student_id );
+}
+Console.WriteLine("已完成資料建置");
